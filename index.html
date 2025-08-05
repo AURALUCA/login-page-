@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Centered Login Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Reset some browser defaults */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f5f7fa;
+      font-family: Arial, sans-serif;
+    }
+
+    .login-card {
+      width: 350px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1.5px 6px #e4e4e4;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .login-card h2 {
+      margin: 0;
+      margin-bottom: 10px;
+      text-align: center;
+      font-weight: normal;
+      color: #333;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    label {
+      font-size: 15px;
+      color: #535353;
+      margin-bottom: 2px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+      width: 100%;
+      outline: none;
+      transition: border 0.2s;
+      background: #fafafa;
+    }
+
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      border-color: #a2aaf0;
+    }
+
+    button[type="submit"] {
+      margin-top: 10px;
+      width: 100%;
+      padding: 12px 0;
+      background: #4a67e6;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+      transition: background 0.18s;
+    }
+
+    button[type="submit"]:hover {
+      background: #3753c7;
+    }
+
+    @media (max-width: 400px) {
+      .login-card {
+        width: 95vw;
+        min-width: 0;
+        padding: 14px 6vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-card">
+    <h2>Login</h2>
+    <form>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit">Sign In</button>
+    </form>
+  </div>
+</body>
+</html>
